@@ -1,0 +1,21 @@
+# CLAUDE.md（プロジェクト指示ファイル）
+CLAUDE.md
+
+# 一般的な除外ファイル
+.DS_Store
+Thumbs.db
+*.log
+.env
+.env.local
+.env.production
+
+# IDEファイル
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# 一時ファイル
+*~
+*.tmp
+*.temp
