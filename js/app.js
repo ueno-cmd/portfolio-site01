@@ -118,3 +118,49 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+
+// 画像モーダル機能
+function openImageModal() {
+    const modal = document.getElementById('imageModal');
+    const modalImage = document.getElementById('modalImage');
+    const screenshot = document.querySelector('.screenshot-img');
+    
+    modalImage.src = screenshot.src;
+    modal.classList.add('show');
+    modal.style.display = 'flex';
+    
+    // ESCキーでモーダルを閉じる
+    document.addEventListener('keydown', handleEscKey);
+    
+    // ボディのスクロールを無効化
+    document.body.style.overflow = 'hidden';
+}
+
+function closeImageModal() {
+    const modal = document.getElementById('imageModal');
+    
+    modal.classList.remove('show');
+    modal.style.display = 'none';
+    
+    // ESCキーのイベントリスナーを削除
+    document.removeEventListener('keydown', handleEscKey);
+    
+    // ボディのスクロールを有効化
+    document.body.style.overflow = 'auto';
+}
+
+function handleEscKey(event) {
+    if (event.key === 'Escape') {
+        closeImageModal();
+    }
+}
+
+// モーダル内の画像クリックで閉じることを防ぐ
+document.addEventListener('DOMContentLoaded', function() {
+    const modalContent = document.querySelector('.modal-content');
+    if (modalContent) {
+        modalContent.addEventListener('click', function(e) {
+            e.stopPropagation();
+        });
+    }
+});

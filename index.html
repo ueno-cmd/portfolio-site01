@@ -78,17 +78,86 @@
             <div class="container">
                 <h2 class="section-title">About</h2>
                 <div class="about-content">
-                    <p>
-                        <strong>「境界に立つ仲介者」</strong>として、データ整理に困っている20代をサポートするAI開発者です。
-                        情報を分析し、その人に最適なAIソリューションを作り出すことを核心として活動しています。
-                    </p>
-                    <p>
-                        <strong>Mission:</strong> データを整理できず困っている20代を、やるべきことがわかり力が発揮できる状態にする
-                    </p>
-                    <p>
-                        場所を選ばないライフスタイルを実践し、都会と自然、技術と伝統の境界を繋ぐ役割を大切にしています。
-                        複合的な役割（仲介者+参加者+分析者）を通じて、同じ志を持つ人との繋がりと新しいプロジェクトの機会を創出しています。
-                    </p>
+                    <div class="about-intro">
+                        <h3 class="about-subtitle">20代向けAIソリューション開発者</h3>
+                        <p class="about-description">
+                            データ整理に困っている20代を、最適なAIソリューションでサポートすることが私の使命です。
+                            技術と人をつなぐ「境界に立つ仲介者」として、実用的なAIアプリケーションを開発し、
+                            ユーザーの日常をより良くするためのツールを提供しています。
+                        </p>
+                    </div>
+
+                    <div class="featured-project">
+                        <div class="project-content">
+                            <div class="project-visual">
+                                <div class="app-screenshot" onclick="openImageModal()">
+                                    <img src="asset/images/スクリーンショット 2025-07-19 192613.png" alt="AIメモアプリケーションのスクリーンショット" class="screenshot-img">
+                                    <div class="screenshot-overlay"></div>
+                                    <div class="zoom-hint">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <circle cx="11" cy="11" r="8"/>
+                                            <path d="21 21L16.65 16.65"/>
+                                            <path d="11 8v6"/>
+                                            <path d="8 11h6"/>
+                                        </svg>
+                                        <span>クリックで拡大</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="project-info">
+                                <h3 class="project-name">AIメモアプリケーション</h3>
+                                <p class="project-overview">
+                                    React + Vite + Cloudflare技術スタックを活用したフルスタックAIアプリケーション。
+                                    AI搭載メモ管理、認証システム、管理者パネル、フォルダ管理機能を実装し、
+                                    サーバーレスアーキテクチャで本番環境運用を実現しました。
+                                </p>
+                                <div class="tech-stack">
+                                    <span class="tech-badge">React</span>
+                                    <span class="tech-badge">Vite</span>
+                                    <span class="tech-badge">Cloudflare Pages</span>
+                                    <span class="tech-badge">Functions</span>
+                                    <span class="tech-badge">D1 Database</span>
+                                </div>
+                                <div class="project-actions">
+                                    <a href="https://ai-memo-app.pages.dev/" target="_blank" rel="noopener noreferrer" class="cta-button primary">
+                                        <span>アプリを体験する</span>
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <path d="M7 17L17 7M17 7H7M17 7V17"/>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="vision-section">
+                        <h3 class="vision-title">Vision & Mission</h3>
+                        <div class="vision-grid">
+                            <div class="vision-card">
+                                <div class="vision-icon">🎯</div>
+                                <h4>実用的なAI開発</h4>
+                                <p>技術のための技術ではなく、実際に人の役に立つAIソリューションの開発に集中</p>
+                            </div>
+                            <div class="vision-card">
+                                <div class="vision-icon">🌱</div>
+                                <h4>20代の成長支援</h4>
+                                <p>データ整理や情報管理に悩む20代が、自分らしく力を発揮できる環境づくり</p>
+                            </div>
+                            <div class="vision-card">
+                                <div class="vision-icon">🔗</div>
+                                <h4>技術と人をつなぐ</h4>
+                                <p>複雑な技術を親しみやすく、使いやすい形でユーザーに届ける仲介者として活動</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="next-steps">
+                        <h3 class="next-title">Next Challenge</h3>
+                        <p class="next-description">
+                            現在は次世代のパーソナライズAIアシスタント開発に取り組んでいます。
+                            ユーザーの行動パターンを学習し、より精度の高い支援を提供できるシステムの構築を目指しています。
+                        </p>
+                    </div>
                 </div>
             </div>
         </section>
@@ -186,6 +255,14 @@
             </div>
         </section>
     </main>
+
+    <!-- 画像モーダル -->
+    <div id="imageModal" class="image-modal" onclick="closeImageModal()">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeImageModal()">&times;</span>
+            <img id="modalImage" src="" alt="拡大表示">
+        </div>
+    </div>
 
     <footer class="footer">
         <div class="container">
