@@ -1,9 +1,6 @@
 @charset "utf-8";
 
 /* パフォーマンス最適化 */
-html {
-    font-display: swap;
-}
 
 /* プリロード用のクリティカルリソース */
 .preload-hidden {
@@ -365,6 +362,84 @@ body {
     transform: translate(2px, -2px);
 }
 
+/* プロマチプロジェクト専用スタイル */
+.project-challenges {
+    margin: 25px 0;
+    padding: 20px;
+    background: linear-gradient(135deg, #fff5f5 0%, #ffffff 100%);
+    border-left: 4px solid #e53e3e;
+    border-radius: 8px;
+}
+
+.challenge-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #e53e3e;
+    margin-bottom: 10px;
+}
+
+.challenge-description {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #666;
+}
+
+.project-learnings {
+    margin: 25px 0;
+    padding: 20px;
+    background: linear-gradient(135deg, #f0fff4 0%, #ffffff 100%);
+    border-left: 4px solid #38a169;
+    border-radius: 8px;
+}
+
+.learning-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #38a169;
+    margin-bottom: 15px;
+}
+
+.learning-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.learning-list li {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #666;
+    margin-bottom: 8px;
+    padding-left: 20px;
+    position: relative;
+}
+
+.learning-list li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: #38a169;
+    font-weight: bold;
+}
+
+.project-status {
+    margin-top: 20px;
+}
+
+.status-badge {
+    display: inline-block;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.status-badge.prototype {
+    background: linear-gradient(135deg, #f7fafc, #edf2f7);
+    color: #4a5568;
+    border: 2px solid #cbd5e0;
+}
+
 /* プロジェクトビジュアル */
 .project-visual {
     position: relative;
@@ -542,6 +617,25 @@ body {
     text-align: center;
     margin-bottom: 40px;
     color: #333;
+}
+
+.vision-image-container {
+    text-align: center;
+    padding: 20px 0;
+}
+
+.vision-image {
+    max-width: 600px;
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.vision-image:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
 }
 
 .vision-grid {
@@ -866,7 +960,7 @@ button:focus {
 }
 
 /* 高コントラストモード対応 */
-@media (prefers-contrast: high) {
+@media (prefers-contrast: more) {
     .hero {
         background: 
             linear-gradient(135deg, rgba(0, 0, 128, 0.9) 0%, rgba(75, 0, 130, 0.9) 100%),

@@ -63,7 +63,6 @@ document.addEventListener('DOMContentLoaded', function() {
         
         sections.forEach(section => {
             const sectionTop = section.offsetTop;
-            const sectionHeight = section.clientHeight;
             const headerHeight = document.querySelector('.header').offsetHeight;
             
             if (window.pageYOffset >= (sectionTop - headerHeight - 50)) {
@@ -108,7 +107,6 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // パフォーマンス最適化: 不要なイベントリスナーのthrottle
     let scrollTimeout;
-    const originalScrollHandler = window.onscroll;
     window.addEventListener('scroll', function() {
         if (!scrollTimeout) {
             scrollTimeout = setTimeout(function() {
@@ -153,6 +151,23 @@ function handleEscKey(event) {
     if (event.key === 'Escape') {
         closeImageModal();
     }
+}
+
+// プロマチプロジェクト用の画像モーダル機能
+function openImageModal2() {
+    const modal = document.getElementById('imageModal');
+    const modalImage = document.getElementById('modalImage');
+    const promatiScreenshot = document.querySelector('img[alt*="プロマチ"]');
+    
+    modalImage.src = promatiScreenshot.src;
+    modal.classList.add('show');
+    modal.style.display = 'flex';
+    
+    // ESCキーでモーダルを閉じる
+    document.addEventListener('keydown', handleEscKey);
+    
+    // ボディのスクロールを無効化
+    document.body.style.overflow = 'hidden';
 }
 
 // モーダル内の画像クリックで閉じることを防ぐ

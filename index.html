@@ -39,7 +39,7 @@
     <header class="header" role="banner">
         <div class="container">
             <h1 class="logo">
-                <a href="#top" aria-label="ホームページトップに戻る">t_ueno</a>
+                <a href="#top" aria-label="ホームページトップに戻る">技術と人をつなぐ</a>
             </h1>
             <nav class="nav" role="navigation" aria-label="メインナビゲーション">
                 <ul class="nav-list">
@@ -94,7 +94,7 @@
                                     <img src="asset/images/スクリーンショット 2025-07-19 192613.png" alt="AIメモアプリケーションのスクリーンショット" class="screenshot-img">
                                     <div class="screenshot-overlay"></div>
                                     <div class="zoom-hint">
-                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" style="fill: none; stroke: currentColor; stroke-width: 2;">
                                             <circle cx="11" cy="11" r="8"/>
                                             <path d="21 21L16.65 16.65"/>
                                             <path d="11 8v6"/>
@@ -121,7 +121,7 @@
                                 <div class="project-actions">
                                     <a href="https://ai-memo-app.pages.dev/" target="_blank" rel="noopener noreferrer" class="cta-button primary">
                                         <span>アプリを体験する</span>
-                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <svg width="16" height="16" viewBox="0 0 24 24" style="fill: none; stroke: currentColor; stroke-width: 2;">
                                             <path d="M7 17L17 7M17 7H7M17 7V17"/>
                                         </svg>
                                     </a>
@@ -130,24 +130,66 @@
                         </div>
                     </div>
 
+                    <div class="featured-project">
+                        <div class="project-content">
+                            <div class="project-visual">
+                                <div class="app-screenshot" onclick="openImageModal2()">
+                                    <img src="asset/images/スクリーンショット 2025-08-05 225913.png" alt="プロマチアプリケーションのスクリーンショット" class="screenshot-img">
+                                    <div class="screenshot-overlay"></div>
+                                    <div class="zoom-hint">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" style="fill: none; stroke: currentColor; stroke-width: 2;">
+                                            <circle cx="11" cy="11" r="8"/>
+                                            <path d="21 21L16.65 16.65"/>
+                                            <path d="11 8v6"/>
+                                            <path d="8 11h6"/>
+                                        </svg>
+                                        <span>クリックで拡大</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="project-info">
+                                <h3 class="project-name">プロマチ</h3>
+                                <p class="project-overview">
+                                    React + Vite + Cloudflare Workers技術スタックを活用したマルチユーザー
+                                    対応のマッチングプラットフォーム。ユーザー認証、役割ベースアクセス
+                                    制御、プロジェクト管理機能を実装。
+                                </p>
+                                <div class="project-challenges">
+                                    <h4 class="challenge-title">技術的制約と対応、現実</h4>
+                                    <p class="challenge-description">
+                                        Cloudflare Workers無料プランのCPU制限により、セキュアな
+                                        パスワードハッシュ化（bcrypt、argon2等）が全てタイムアウト
+                                        エラーとなる。外部API呼び出しも制限されるため、現状では
+                                        安全な新規登録システムの実装が困難。
+                                    </p>
+                                </div>
+                                <div class="project-learnings">
+                                    <h4 class="learning-title">学んだこと</h4>
+                                    <ul class="learning-list">
+                                        <li>サーバーレス環境の予期しない制約発見</li>
+                                        <li>理論と実運用のギャップ体験</li>
+                                        <li>技術選択の重要性（事前検証の必要性）</li>
+                                        <li>プロダクト開発における現実的制約の影響</li>
+                                    </ul>
+                                </div>
+                                <div class="tech-stack">
+                                    <span class="tech-badge">React</span>
+                                    <span class="tech-badge">Vite</span>
+                                    <span class="tech-badge">Cloudflare Workers</span>
+                                    <span class="tech-badge">Authentication</span>
+                                    <span class="tech-badge">RBAC</span>
+                                </div>
+                                <div class="project-status">
+                                    <span class="status-badge prototype">プロトタイプ・学習プロジェクト</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                     <div class="vision-section">
                         <h3 class="vision-title">Vision & Mission</h3>
-                        <div class="vision-grid">
-                            <div class="vision-card">
-                                <div class="vision-icon">🎯</div>
-                                <h4>実用的なAI開発</h4>
-                                <p>技術のための技術ではなく、実際に人の役に立つAIソリューションの開発に集中</p>
-                            </div>
-                            <div class="vision-card">
-                                <div class="vision-icon">🌱</div>
-                                <h4>20代の成長支援</h4>
-                                <p>データ整理や情報管理に悩む20代が、自分らしく力を発揮できる環境づくり</p>
-                            </div>
-                            <div class="vision-card">
-                                <div class="vision-icon">🔗</div>
-                                <h4>技術と人をつなぐ</h4>
-                                <p>複雑な技術を親しみやすく、使いやすい形でユーザーに届ける仲介者として活動</p>
-                            </div>
+                        <div class="vision-image-container">
+                            <img src="asset/images/自己理解メソッド_A4.jpg" alt="自己理解メソッド - Vision & Mission" class="vision-image">
                         </div>
                     </div>
 
