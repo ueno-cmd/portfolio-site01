@@ -696,6 +696,117 @@ body {
 }
 
 /* About - 次のステップセクション */
+/* My Vision セクション */
+.my-vision {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 50px;
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+    margin-top: 40px;
+}
+
+.my-vision::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+    background-size: 30px 30px;
+    animation: float 20s linear infinite;
+    opacity: 0.3;
+}
+
+.vision-main-title {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+.vision-core {
+    margin-bottom: 30px;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+.vision-statement-title {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #f7fafc;
+}
+
+.vision-statement {
+    font-size: 18px;
+    line-height: 1.7;
+    font-weight: 500;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.vision-emotions, .vision-approach, .current-focus {
+    margin-bottom: 30px;
+    position: relative;
+    z-index: 1;
+}
+
+.emotion-title, .approach-title, .focus-title {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #f7fafc;
+}
+
+.emotion-description, .focus-description {
+    font-size: 16px;
+    line-height: 1.7;
+    opacity: 0.95;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.approach-list {
+    list-style: none;
+    padding: 0;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.approach-list li {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 12px;
+    padding-left: 30px;
+    position: relative;
+    opacity: 0.95;
+}
+
+.approach-list li::before {
+    content: '✨';
+    position: absolute;
+    left: 0;
+    font-size: 18px;
+}
+
+.current-focus {
+    margin-bottom: 0;
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* 旧 Next Steps セクション（削除予定） */
 .next-steps {
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     color: white;
@@ -1074,6 +1185,36 @@ button:focus {
         font-size: 40px;
     }
     
+    .my-vision {
+        padding: 35px 20px;
+        margin-top: 30px;
+    }
+    
+    .vision-main-title {
+        font-size: 24px;
+    }
+    
+    .vision-statement-title {
+        font-size: 18px;
+    }
+    
+    .vision-statement {
+        font-size: 16px;
+        padding: 15px;
+    }
+    
+    .emotion-title, .approach-title, .focus-title {
+        font-size: 16px;
+    }
+    
+    .emotion-description, .focus-description {
+        font-size: 14px;
+    }
+    
+    .approach-list li {
+        font-size: 14px;
+    }
+    
     .next-steps {
         padding: 30px 20px;
     }
@@ -1189,6 +1330,43 @@ button:focus {
     
     .vision-card p {
         font-size: 14px;
+    }
+    
+    .my-vision {
+        padding: 25px 15px;
+        border-radius: 15px;
+        margin-top: 25px;
+    }
+    
+    .vision-main-title {
+        font-size: 22px;
+        margin-bottom: 25px;
+    }
+    
+    .vision-statement-title {
+        font-size: 16px;
+    }
+    
+    .vision-statement {
+        font-size: 15px;
+        padding: 15px;
+    }
+    
+    .emotion-title, .approach-title, .focus-title {
+        font-size: 15px;
+    }
+    
+    .emotion-description, .focus-description {
+        font-size: 13px;
+    }
+    
+    .approach-list li {
+        font-size: 13px;
+        padding-left: 25px;
+    }
+    
+    .approach-list li::before {
+        font-size: 16px;
     }
     
     .next-steps {
