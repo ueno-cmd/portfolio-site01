@@ -1,0 +1,173 @@
+---
+import Base from "../layouts/Base.astro";
+import { siteConfig } from "../siteConfig";
+const CTA_HREF = siteConfig.contactFormUrl;
+import ExpectedChanges from "../components/ExpectedChanges.astro";
+---
+<Base title="境界に立つ仲介者" description="どういうことがやりたいかを、まずは無料で話しませんか？">
+  <header class="hero" id="top">
+        <div class="inner">
+            <h1>あなたのやりたいを『形』にします</h1>
+            <p>やりたいことを言語化し、最適な導線を設計します。</p>
+            <a class="btn" href={CTA_HREF} aria-label="お問い合わせフォームへ">相談する</a>
+            <div class="chips">
+                <span class="chip">個人向け</span>
+                <span class="chip">初回無料</span>
+                <span class="chip">60分面談</span>
+            </div>
+        </div>
+    </header>
+
+    <section aria-labelledby="problems-title" class="problems">
+        <div class="container text-center">
+            <h2 id="problems-title" class="section-title">こんなお悩みはありませんか？</h2>
+            <p class="intro">LPを作りたい、発信を始めたいと思っても、<br>『そもそも何から考えればいいのか…』という壁にぶつかる人は少なくありません。</p>
+
+            <div class="concerns-grid">
+                <div class="concern-item">
+                    <svg class="concern-icon" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <path d="M9 12l2 2 4-4" fill="none"></path>
+                        <circle cx="12" cy="12" r="9" fill="none"></circle>
+                    </svg>
+                    <p class="concern-text">やりたいことやビジョンはあるけれど、言葉にうまく落とし込めない</p>
+                </div>
+                <div class="concern-item">
+                    <svg class="concern-icon" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <path d="M9 12l2 2 4-4" fill="none"></path>
+                        <circle cx="12" cy="12" r="9" fill="none"></circle>
+                    </svg>
+                    <p class="concern-text">LPを作る前に、そもそも方向性を整理したい</p>
+                </div>
+                <div class="concern-item">
+                    <svg class="concern-icon" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <path d="M9 12l2 2 4-4" fill="none"></path>
+                        <circle cx="12" cy="12" r="9" fill="none"></circle>
+                    </svg>
+                    <p class="concern-text">ノーコードやテンプレートでは限界を感じている</p>
+                </div>
+                <div class="concern-item">
+                    <svg class="concern-icon" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <path d="M9 12l2 2 4-4" fill="none"></path>
+                        <circle cx="12" cy="12" r="9" fill="none"></circle>
+                    </svg>
+                    <p class="concern-text">制作をお願いする前に、信頼できる相手と話したい</p>
+                </div>
+            </div>
+
+            <div class="cta">
+                <p class="cta-lead">もしひとつでも当てはまるなら、まずは</p>
+                <p>
+                    <a class="btn-indigo" href={CTA_HREF} aria-label="お問い合わせフォームへ">無料でお話してみませんか？</a>
+                </p>
+                <p class="cta-note">60分で現状ヒアリング。無理な勧誘はしません。</p>
+            </div>
+        </div>
+    </section>
+
+    <section aria-labelledby="free-talk-title">
+        <div class="container">
+            <h2 id="free-talk-title" class="section-title">無料で話すこと</h2>
+            <div class="free-talk-lead">
+              <p><strong>はじめの一歩を、いっしょに考えましょう</strong></p>
+              <p>形にする前に、まずは「話す」ことから。</p>
+              <p>もやもや・ぼんやりした段階でも大丈夫です。あなたの想いを聞かせてください。</p>
+            </div>
+            <div class="points">
+                <div class="card">
+                    <strong>あなたのことを聞かせてください</strong>
+                    <p class="note">やりたいことや思いをざっくばらんに話してください。対話の中で少しずつ輪郭を見つけていきます。</p>
+                </div>
+                <div class="card">
+                    <strong>LPの話はあとで大丈夫</strong>
+                    <p class="note">いきなり形にする必要はありません。まずは状況理解し、合意の上で次に進みます。</p>
+                </div>
+                <div class="card">
+                    <strong>一緒に形にしましょう</strong>
+                    <p class="note">会話の中で方向性を見つけ、小さな一歩を一緒に描きます。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+
+    <section aria-labelledby="about-title">
+        <div class="container text-center">
+            <h2 id="about-title" class="section-title">自己紹介</h2>
+            <p class="note">AI×設計。個人向けLPの導線設計と実装が得意です。</p>
+            <p>
+                <a class="btn-indigo" href={siteConfig.social.xUrl} rel="noopener" aria-label="Xプロフィールへ">
+                    <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" style="margin-right:6px">
+                        <path d="M18.244 2H21.5l-7.5 8.57L23.5 22h-7.078l-5.53-7.21L4.5 22H1.244l8.08-9.23L.5 2h7.203l5.007 6.64L18.244 2Zm-1.238 18h1.924L7.07 4h-1.99l11.926 16Z" fill="currentColor"></path>
+                    </svg>
+                    Xを見る
+                </a>
+            </p>
+        </div>
+    </section>
+
+    <section aria-labelledby="process-title" class="alt">
+        <div class="container">
+            <h2 id="process-title" class="section-title">一緒に、こうやって進めます</h2>
+            <div class="steps-vertical" role="list">
+                <div class="v-step" role="listitem" aria-label="STEP 1 言語化">
+                    <div class="v-step-marker" aria-hidden="true">1</div>
+                    <div class="v-step-content">
+                        <div class="v-step-head">
+                            <svg class="v-step-icon" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <path d="M3 21h3l11-11-3-3L3 18v3z" fill="none"></path>
+                                <path d="M14 7l3 3" fill="none"></path>
+                            </svg>
+                            <strong>言語化：想いを言葉にして、方向性を定めます</strong>
+                        </div>
+                        <p class="note">一緒に話しながら、やりたいことを整理し、目的を明確にします。</p>
+                    </div>
+                </div>
+                <div class="v-step" role="listitem" aria-label="STEP 2 設計">
+                    <div class="v-step-marker" aria-hidden="true">2</div>
+                    <div class="v-step-content">
+                        <div class="v-step-head">
+                            <svg class="v-step-icon" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <rect x="3" y="7" width="18" height="10" rx="2" fill="none"></rect>
+                                <path d="M7 7v4M11 7v4M15 7v4" fill="none"></path>
+                            </svg>
+                            <strong>設計：小さく形を描きます</strong>
+                        </div>
+                        <p class="note">LPの導線・コピー・構成を一緒に考え、最小限のカタチを決めます。</p>
+                    </div>
+                </div>
+                <div class="v-step" role="listitem" aria-label="STEP 3 最小実装">
+                    <div class="v-step-marker" aria-hidden="true">3</div>
+                    <div class="v-step-content">
+                        <div class="v-step-head">
+                            <svg class="v-step-icon" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <path d="M8 16l-4-4 4-4" fill="none"></path>
+                                <path d="M16 8l4 4-4 4" fill="none"></path>
+                            </svg>
+                            <strong>実装：まず1枚からはじめましょう</strong>
+                        </div>
+                        <p class="note">小さく作って実際に動かし、良ければ広げていきます。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <ExpectedChanges />
+
+    
+
+    <section aria-labelledby="contact-bottom-title">
+        <div class="container">
+            <h2 id="contact-bottom-title" class="section-title">お問い合わせ</h2>
+            <p class="note">以下のフォームからご相談ください。</p>
+            <iframe
+              src="https://form.run/embed/@hotmail-AwwSAQGX46R6NC6OKjfT?embed=direct"
+              title="お問い合わせフォーム"
+              style="width:100%; min-height: 1200px; border:0;"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+        </div>
+    </section>
+</Base>

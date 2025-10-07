@@ -1,0 +1,53 @@
+---
+export interface Props {
+    title?: string;
+    description?: string;
+}
+
+const {title = "無料相談LP", description = "まずは無料で話しませんか？"} = Astro.props as Props;
+import "../styles/global.css";
+import { siteConfig } from "../siteConfig";
+---
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="description" content={description}/>
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <title>{title}</title>
+    <!-- Open Graph / Twitter Cards -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content={siteConfig.site?.name} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={siteConfig.site?.url} />
+    <meta property="og:image" content={siteConfig.site?.ogImage} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content={siteConfig.site?.ogImage} />
+</head>
+<body>
+<a class="skip-link" href="#main">メインコンテンツへ移動</a>
+<header class="site-header">
+    <div class="container header-inner">
+        <a href="/#top" class="brand" aria-label="トップへ">Bridge Builder</a>
+        <nav class="nav" aria-label="主要ナビゲーション">
+            <a href="/#problems-title">お悩み</a>
+            <a href="/#free-talk-title">無料で話すこと</a>
+            <a href="/#process-title">進め方</a>
+            <a href="/#expected-changes-title">変化</a>
+            <a href={siteConfig.contactFormUrl} class="nav-cta" aria-label="お問い合わせフォームへ">相談する</a>
+        </nav>
+    </div>
+</header>
+<main id="main">
+    <slot/>
+</main>
+<footer class="footer">
+    <div class="container">
+        <small>© {new Date().getFullYear()} t_ueno</small>
+    </div>
+</footer>
+ 
+</body>
+</html>

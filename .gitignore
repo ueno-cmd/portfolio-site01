@@ -19,3 +19,8 @@ Thumbs.db
 *~
 *.tmp
 *.temp
+node_modules/
+dist/
+/.serena/
+/AGENTS.md
+/shaggy-sphere/reference/
